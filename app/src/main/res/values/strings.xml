@@ -22,6 +22,12 @@
   <!-- No stocks -->
     <string name="empty_stock_list">No Stock Information Available</string>
 
+  <!-- Stock already saved -->
+  <string name="stock_duplicate">This stock is already saved!</string>
+
+  <!-- Symbol not found -->
+  <string name="symbol_not_found">No information for given symbol</string>
+
 
   <!-- Spinner selection for the graphs -->
   <string-array name="graph_spinner_options">

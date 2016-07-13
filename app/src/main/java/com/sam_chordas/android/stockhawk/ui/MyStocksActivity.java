@@ -102,7 +102,6 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
               @Override public void onItemClick(View v, int position) {
 
                 // Send to Graph Activity
-                  Log.v(LOG_TAG, " ALSKDFJALKSDJFLKASDJFLKASJDFASDF THIS IS THE item ID OF THE TOUCH " + mCursorAdapter.getItemId(position));
                   Intent intent = new Intent(MyStocksActivity.this, GraphActivity.class);
                   intent.putExtra("id", "" + mCursorAdapter.getItemId(position));
 
@@ -130,7 +129,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
                       new String[] { input.toString() }, null);
                   if (c.getCount() != 0) {
                     Toast toast =
-                        Toast.makeText(MyStocksActivity.this, "This stock is already saved!",
+                        Toast.makeText(MyStocksActivity.this, getString(R.string.stock_duplicate),
                             Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.CENTER, Gravity.CENTER, 0);
                     toast.show();
@@ -188,11 +187,6 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
     Toast.makeText(mContext, getString(R.string.network_toast), Toast.LENGTH_SHORT).show();
   }
 
-    public static void utilToast(){
-    Toast.makeText(context, "Toast from Util", Toast.LENGTH_SHORT).show();
-  }
-
-
   public void restoreActionBar() {
     ActionBar actionBar = getSupportActionBar();
     actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
@@ -246,7 +240,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
               new String[] { QuoteColumns.BIDPRICE }, QuoteColumns.BIDPRICE + "= ?", new String[] {"null"}, null );
 
       if (cNull.getCount() != 0) {
-          Toast.makeText(MyStocksActivity.this, "No information for given symbol", Toast.LENGTH_LONG).show();
+          Toast.makeText(MyStocksActivity.this, getString(R.string.symbol_not_found), Toast.LENGTH_LONG).show();
           String selection = QuoteColumns.BIDPRICE + " LIKE ?";
           String[] selectionArgs = { String.valueOf("null") };
           getContentResolver().delete(QuoteProvider.Quotes.CONTENT_URI, selection, selectionArgs);
