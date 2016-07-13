@@ -1,0 +1,41 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+
+  <string name="app_name">Stock Hawk</string>
+  <string name="action_change_units">Change Units</string>
+
+  <!-- Button and dialog to add stock -->
+  <string name="symbol_search">Symbol Search</string>
+  <string name="content_test">Search for a Stock Symbol</string>
+  <string name="input_hint">FB</string>
+  <string name="input_prefill"></string>
+  <string name="network_toast">Uh-oh! This app requires an internet connection</string>
+  <string name="button_add_stock">Add a stock</string>
+
+  <!-- Date Range Text -->
+  <string name="graph_range_text">&#160; Date Range: &#160; </string>
+  <string name="graph_date_range"> %1$s-%2$s-%3$s through %4$s-%5$s-%6$s</string>
+  <string name="graph_date_range_rtl"> %6$s-%5$s-%4$s through %3$s-%2$s-%1$s</string>
+
+  <!--Graph cant get information -->
+  <string name="couldnt_get_graph">Sorry! No graph could be found, please check your internet connection and try again.</string>
+
+  <!-- No stocks -->
+    <string name="empty_stock_list">No Stock Information Available</string>
+
+
+  <!-- Spinner selection for the graphs -->
+  <string-array name="graph_spinner_options">
+    <item>1 Year</item>
+    <item>6 Months</item>
+    <item>1 Month</item>
+  </string-array>
+
+  <!-- a11y strings -->
+  <string name="a11y_graph_one_month">The one month high is <xliff:g id="high">%1$d</xliff:g> and the low is <xliff:g id="low">%2$d</xliff:g></string>
+  <string name="a11y_graph_six_month">The six month high is <xliff:g id="high">%1$d</xliff:g> and the low is <xliff:g id="low">%2$d</xliff:g></string>
+  <string name="a11y_graph_twelve_month">The one year high is <xliff:g id="high">%1$d</xliff:g> and the low is <xliff:g id="low">%2$d</xliff:g></string>
+  <string name="a11y_quotes">Current bid price of %1$s is %2$s .  and the monetary change is %3$s . which is %4$s</string>
+
+  <!-- Widget Title -->
+  <string name="title_widget">StockHawk widget</string>
+</resources>
